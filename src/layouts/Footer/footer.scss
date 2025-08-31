@@ -1,0 +1,122 @@
+@import "@/styles/variables.scss";
+
+.footer {
+    padding: 80px 230px 80px 230px;
+    background-color: $black;
+    color:white;
+    display: flex;
+    justify-content: space-between;
+
+    &__firstDiv {
+        display: grid;
+        gap:37px;
+
+        &__nav {
+            list-style: none;
+            display: flex;
+            gap:50px;
+        }
+    }
+
+    &__secondDiv {
+        display: grid;
+        gap:37px;
+        justify-items: end;
+
+        &__socials {
+            display: flex;
+            gap:35px;
+        }
+
+        &__text {
+            color: gray;
+            font-size: clamp(1rem,0.93vw,10rem);
+            font-family: $font-primary;
+        }
+    }
+}
+
+.footer__nav-item {
+    position: relative;
+    color: $white;
+    text-decoration: none;
+    font-size: clamp(1rem,1vw,10rem);
+    font-family: $font-primary;
+}
+
+.footer__nav-item::after {
+    content: "";
+    position: absolute;
+    left: 27%;
+    bottom: -10px;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.footer__nav-item:hover::after {
+    width: 50%;
+}
+
+.socialImage {
+    position: relative;
+}
+
+.socialImage::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease;
+}
+
+.socialImage:hover::after {
+    width: 100%;
+}
+
+
+@media (max-width: 1800px) {
+    .footer {
+        padding: 80px 150px 180px 150px;
+    }
+}
+
+@media (max-width: 1350px) {
+    .footer {
+        padding: 80px 100px 80px 100px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .footer {
+        display: grid;
+        justify-content: center;
+        gap:60px;
+        padding: 80px 50px 80px 50px;
+
+        &__firstDiv {
+            justify-items: center;
+
+            &__nav {
+                display: grid;
+                justify-items: center;
+                gap:30px;
+            }
+        }
+
+        &__secondDiv {
+            justify-items: center;
+            gap:15px;
+        }
+    }
+}
+
+@media (max-width:400px) {
+    .footer {
+        padding: 80px 30px 80px 30px;
+    }
+}

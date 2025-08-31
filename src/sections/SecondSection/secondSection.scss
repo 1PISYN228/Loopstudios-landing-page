@@ -1,0 +1,41 @@
+@import "@/styles/variables.scss";
+
+.secondSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__title {
+        font-family: $font-secondary;
+        font-weight: 300;
+        font-size: clamp(2.4rem,3.2vw,10rem);
+    }
+
+    &__button {
+        border: 2px solid $black;
+        padding: 10px 50px 10px 50px;
+        background: transparent;
+        font-family: $font-primary;
+        font-size: clamp(1.1rem,1vw,10rem);
+        letter-spacing: 5px;
+        cursor: pointer;
+        transition-duration: 300ms;
+        transition-timing-function: ease-in-out;
+        transition-property: all;
+    }
+
+    &__button:hover {
+        background-color: $black;
+        color:$white;
+    }
+}
+
+@media (max-width: 1024px) {
+    .secondSection {
+        justify-content: center;
+
+        &__button {
+            display: none;
+        }
+    }
+}

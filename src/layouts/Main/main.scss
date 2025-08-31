@@ -1,0 +1,33 @@
+@import "@/styles/variables.scss";
+
+main {
+    padding: 180px 230px 180px 230px;
+    background-color: $white;
+    display: grid;
+    gap:180px;
+}
+
+@media (max-width: 1800px) {
+    main {
+        padding: 80px 150px 180px 150px;
+    }
+}
+
+@media (max-width: 1350px) {
+    main {
+        padding: 180px 100px 180px 100px;
+    }
+}
+
+@media (max-width: 1024px) {
+    main {
+        padding: 130px 50px 130px 50px;
+        gap:80px;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 130px 20px 130px 20px;
+    }
+}

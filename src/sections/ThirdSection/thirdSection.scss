@@ -1,0 +1,36 @@
+@import "@/styles/variables.scss";
+
+.thirdSection {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:30px;
+    justify-items: center;
+
+    &__buttonMobile {
+        display: none;
+        border: 2px solid $black;
+        padding: 10px 50px 10px 50px;
+        background: transparent;
+        font-family: $font-primary;
+        font-size: clamp(1.1rem,1vw,10rem);
+        letter-spacing: 5px;
+        cursor: pointer;
+        transition-duration: 300ms;
+        transition-timing-function: ease-in-out;
+        transition-property: all;
+    }
+
+}
+
+
+
+@media (max-width: 1024px) {
+    .thirdSection {
+        grid-template-columns: repeat(1, 1fr);
+        gap:40px;
+
+        &__buttonMobile {
+            display: block;
+        }
+    }
+}

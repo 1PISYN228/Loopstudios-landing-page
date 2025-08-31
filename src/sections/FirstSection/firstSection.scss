@@ -1,0 +1,86 @@
+@import "@/styles/variables.scss";
+
+.firstSection {
+    display: flex;
+    gap:50px;
+    position: relative;
+
+    &__article {
+        display: flex;
+        flex-direction: column;
+        gap:30px;
+        position: absolute;
+        right: 70px;
+        bottom:0px;
+        background-color: $white;
+        padding: 100px 0px 0px 100px;
+
+        &__title {
+            font-family: $font-secondary;
+            font-weight: 300;
+            font-size: clamp(2.7rem,3.2vw,10rem);
+        }
+
+        &__text {
+            font-family: $font-primary;
+            color:gray;
+            font-size: clamp(1.1rem,0.95vw,10rem);
+        }
+    }
+
+    &__br {
+        display: block;
+    }
+}
+
+.imageDesktop {
+    width: 50vw;
+    height: auto;
+}
+
+.imageMobile {
+    display: none;    
+}
+
+
+
+@media (max-width: 1350px) {
+    .firstSection__article {
+        padding: 50px 0px 0px 50px;
+        right: 10px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .firstSection {
+        display: grid;
+        justify-items: center;
+
+        &__article {
+            position:static;
+            padding: 0;
+            text-align: center;
+        }
+    }
+
+    .imageDesktop {
+        display: none;
+    }
+
+    .imageMobile {
+        display: block;
+        width: 65vw;
+        height: auto;
+    }
+}
+
+@media (max-width: 550px) {
+    .firstSection__br {
+        display: none;
+    }
+
+    .imageMobile {
+        width: 100%;
+        height: auto;
+    }
+}
