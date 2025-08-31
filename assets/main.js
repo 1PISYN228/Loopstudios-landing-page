@@ -1,0 +1,1 @@
+const r=()=>{if(typeof document<"u"){const t=document.querySelector("[data-js-burger-open]"),n=document.querySelector("[data-js-burger-close]"),e=document.querySelector("[data-js-burgerMenu]");t.addEventListener("click",()=>{e.classList.add("is-visible")}),n.addEventListener("click",()=>{e.classList.remove("is-visible")})}};r();
